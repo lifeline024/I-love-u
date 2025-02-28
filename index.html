@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I love You</title>
+  <title>Please Take Your Medicine</title>
   <style>
-    /* General Styles */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
-      font-family: 'Dancing Script', cursive;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6f61, #ff3b2f);
+      background: linear-gradient(135deg, #8e44ad, #3498db, #2ecc71, #f1c40f);
       color: white;
       text-align: center;
       animation: gradientBG 10s ease infinite;
@@ -24,7 +22,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Container for Content */
     .container {
       position: relative;
       height: 100vh;
@@ -57,80 +54,28 @@
     button {
       padding: 15px 30px;
       font-size: 1.5rem;
-      background: #3b2fff;
+      background: #27ae60;
       color: white;
       border: none;
       border-radius: 50px;
       cursor: pointer;
       animation: fadeIn 4s ease-in-out;
-      box-shadow: #3b2fff;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     button:hover {
-      background: #6f61ff;
+      background: #2ecc71;
       transform: scale(1.1);
-      box-shadow: #3b2fff;
     }
 
     #noButton {
-      background: #6f61ff;
+      background: #e74c3c;
     }
 
     #noButton:hover {
-      background: #3b2fff;
+      background: #c0392b;
     }
 
-    /* Heart Rain Animation */
-    .hearts {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .hearts span {
-      position: absolute;
-      color: #ff6f61;
-      font-size: 2rem;
-      animation: fall 5s linear infinite;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(-10%) rotate(0deg); }
-      100% { transform: translateY(110vh) rotate(360deg); }
-    }
-
-    /* Sparkle Effect */
-    .sparkles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .sparkles span {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      animation: sparkle 2s infinite ease-in-out;
-    }
-
-    @keyframes sparkle {
-      0% { transform: scale(0); opacity: 0; }
-      50% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(0); opacity: 0; }
-    }
-
-    /* Fade In Animation */
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -139,65 +84,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Heart Rain -->
-  <div class="hearts">
-    <!-- Hearts will be generated dynamically using JavaScript -->
-  </div>
-
-  <!-- Sparkle Effect -->
-  <div class="sparkles">
-    <!-- Sparkles will be generated dynamically using JavaScript -->
-  </div>
-
-  <!-- Proposal Content -->
   <div class="container">
-    <h1>❤️❤️ I Love You ❤️❤️</h1>
-    <p>Tumse abhi tak na mila hoon, na dekha hai, par dil kehta hai ki tum meri zindagi ka sabse khoobsurat hissa banogi. Kya tum meri banogi aur mujhe duniya ka sabse khush insaan banaogi?</p>
+    <h1>💊 Please Take Your Medicine 💊</h1>
+    <p>Dawa lene se hi tum jaldi theek ho sakte ho. Kya tum meri baat manoge aur dawa loge? 🥺</p>
     <div class="buttons">
-      <button onclick="showResponse()">Yes</button>
-      <button id="noButton" onmouseover="moveNoButton()">No</button>
+      <button onclick="showResponse()">Haan, le rahi hoon 😊</button>
+      <button id="noButton" onmouseover="moveNoButton()">Nahi 😜</button>
     </div>
   </div>
 
   <script>
-    // Heart Rain Generator
-    const heartsContainer = document.querySelector('.hearts');
-    function createHeart() {
-      const heart = document.createElement('span');
-      heart.innerHTML = '❤️,💗';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-      heartsContainer.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 5000);
-    }
-
-    setInterval(createHeart, 300);
-
-    // Sparkle Effect Generator
-    const sparklesContainer = document.querySelector('.sparkles');
-    function createSparkle() {
-      const sparkle = document.createElement('span');
-      sparkle.style.left = Math.random() * 100 + 'vw';
-      sparkle.style.top = Math.random() * 100 + 'vh';
-      sparkle.style.animationDuration = Math.random() * 2 + 1 + 's';
-      sparklesContainer.appendChild(sparkle);
-
-      setTimeout(() => {
-        sparkle.remove();
-      }, 3000);
-    }
-
-    setInterval(createSparkle, 200);
-
-    // Button Click Response
     function showResponse() {
-      alert("I love you Too ❤️.. ,instagram: @just_imegine024");
+      alert("Bahut badhiya! Tum jaldi theek ho jaoge! ❤️");
     }
 
-    // Move No Button
     const noButton = document.getElementById('noButton');
     function moveNoButton() {
       const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
